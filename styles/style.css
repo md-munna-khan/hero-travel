@@ -37,17 +37,17 @@ text-align: center;
 }
 .container{
     width: 90%;
-    display: flex;
+    
     justify-content: space-between;
-    margin:  80px auto;
+    margin:  5rem auto;
     align-items: center;
 }
 .logo{
     display: flex;
 }
-.logo img{
+/* .logo img{
     margin-right:16px ;
-}
+} */
 .navbar{
     display: flex;
    justify-content: space-around;
@@ -89,6 +89,9 @@ color:rgb(255, 255, 255) ;
 }
 .Explore-travel-container p{
     color: rgb(255, 255, 255);
+   padding: 1.5rem 0;
+   margin: auto;
+   
 }
 .travel-inputs{
     margin-top:2rem ;
@@ -127,6 +130,10 @@ color: rgb(255, 255, 255);
 background: rgb(255, 84, 0);
 }
 /* popular tour style */
+.popular-tours img{
+    width: 100%;
+    height: 100%;
+}
 .popular-tours{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -146,4 +153,97 @@ background: rgb(255, 84, 0);
     font-size: 16px;
 font-weight: 400;
 color: rgba(19, 19, 24, 0.7);
+}
+/* chooce your destination  */
+.your-destination img{
+width: 100%;
+height: 300px;
+}
+.row-1,
+.row-2,
+.row-3{
+display: grid;
+grid-template-columns: 1fr 1fr ;
+margin: 1rem 0;
+gap: 1rem;
+}
+.row-2{
+    grid-template-columns: 0.75fr 1fr 0.60fr;
+}
+.country-card{
+    position: relative;
+}
+.country{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 28px;
+font-weight: 800;
+color: rgb(255, 255, 255);
+transform: translate(-50%, -50%);
+}
+/* footer styles */
+.footer-section{
+     background: rgba(19, 19, 24, 0.05);
+    padding: 2rem 0;
+}
+.footer-section .logo{
+    margin: 2rem auto;
+  justify-content: center;
+    
+}
+.social{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+}
+.social i{
+
+height: 21.57px;
+font-size: 24px;
+}
+.footer-section hr{
+    margin: 2rem auto;
+}
+/* responsive design */
+@media screen and (max-width:600px) {
+    h3{
+        font-size: 26px;
+    }
+    p{
+        font-size:16px ;
+    }
+    .navbar{
+        display: none;
+   
+    }
+    .container{
+        margin: 3rem auto;
+    }
+    .Explore-travel-container h3{
+        font-size: 26px;
+    }
+    .Explore-travel-container p{
+        width: 60%;
+  text-align: center;
+  line-height: normal;
+        
+    }
+    
+    .travel-inputs{
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+    .travel-inputs input,
+    .travel-inputs select,
+    .travel-inputs button{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    .popular-tours, .row-1,.row-2,.row-3{
+        grid-template-columns: 1fr;
+    }
 }
